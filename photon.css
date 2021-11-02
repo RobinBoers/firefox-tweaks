@@ -1,0 +1,139 @@
+/*** Photon-like Menu Colors (22 Sept 2021) ***/
+
+/* Bookmarks Toolbar folders */
+#PersonalToolbar menupopup,
+/* Right-click context menus */
+#mainPopupSet menupopup,
+/* Top menu bar on Windows (not sure about others) */
+#toolbar-menubar menupopup,
+/* Sidebar/Library bookmark/history context menus */
+#placesContext {
+  /* Text color */
+  --menu-color: #000 !important;
+  --arrowpanel-color: #000 !important;
+  --panel-color: #000 !important;
+  /* Background color */
+  --menu-background-color:  #f0f0f0 !important;
+  --arrowpanel-background: #f0f0f0 !important;
+  --panel-background: #f0f0f0 !important;
+  /* Border color (if any) */
+  --menu-border-color: threedshadow !important;
+  --arrowpanel-border-color: threedshadow !important;
+  --panel-border-color: threedshadow !important;
+  /* Hovered/expanded item background color */
+  --menuitem-hover-background-color: #e0e0e6 !important;
+  --button-hover-bgcolor: #e0e0e6 !important;
+  /* Disabled items text color and hovered background */
+  --menu-disabled-color: rgba(21, 20, 26, 0.4) !important;
+  --menuitem-disabled-hover-background-color: rgba(224, 224, 230, 0.4) !important;
+}
+
+/*** Proton Tabs Tweaks ***/
+
+/* Adjust tab corner shape, optionally remove space below tabs */
+
+#tabbrowser-tabs {
+    --user-tab-rounding: 0px;
+}
+
+.tab-background {
+    border-radius: var(--user-tab-rounding) var(--user-tab-rounding) 0px 0px !important;
+    margin-block: 1px 0 !important;
+}
+#scrollbutton-up, #scrollbutton-down { /* 6/10/2021 */
+    border-top-width: 1px !important;
+    border-bottom-width: 0 !important;
+}
+/* Container color bar visibility */
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
+    margin: 0px max(calc(var(--user-tab-rounding) - 3px), 0px) !important;
+}
+
+/* Override Normal Density height to Compact Density height only for tabs */
+
+#TabsToolbar, #tabbrowser-tabs {
+    --tab-min-height: 31px !important;
+}
+    /* Tweak for covering a line at the bottom of the active tab on some themes 8/11/2021 */
+#main-window[sizemode="normal"] #toolbar-menubar[autohide="true"] + #TabsToolbar, 
+#main-window[sizemode="normal"] #toolbar-menubar[autohide="true"] + #TabsToolbar #tabbrowser-tabs {
+    --tab-min-height: 30px !important;
+}
+#scrollbutton-up,
+#scrollbutton-down {
+    border-top-width: 0 !important;
+    border-bottom-width: 0 !important;
+}
+
+    /* [Connected Tabs] Set a max height based on min-height plus margin-block: 1px 0 */
+#TabsToolbar, #TabsToolbar > hbox, #TabsToolbar-customization-target, #tabbrowser-arrowscrollbox  {
+    max-height: calc(var(--tab-min-height) + 1px) !important;
+}
+    /* [Connected Tabs] Adjust padding around icons on buttons to avoid crushed images */
+#TabsToolbar-customization-target toolbarbutton > .toolbarbutton-icon, 
+#TabsToolbar-customization-target .toolbarbutton-text, 
+#TabsToolbar-customization-target .toolbarbutton-badge-stack,
+#scrollbutton-up,#scrollbutton-down {
+    padding-top: 7px !important;
+    padding-bottom: 6px !important;
+}
+
+/* Inactive tabs: Separator line style */
+
+.tabbrowser-tab:not([selected=true]):not([multiselected=true]):not([beforeselected-visible="true"]) .tab-background {
+    border-right: 1px solid var(--lwt-background-tab-separator-color, rgba(0, 0, 0, .20)) !important;
+}
+/* For dark backgrounds */
+[brighttext="true"] .tabbrowser-tab:not([selected=true]):not([multiselected=true]):not([beforeselected-visible="true"]) .tab-background {
+    border-right: 1px solid var(--lwt-background-tab-separator-color, var(--lwt-selected-tab-background-color, rgba(255, 255, 255, .20))) !important;
+}
+.tabbrowser-tab:not([selected=true]):not([multiselected=true]) .tab-background {
+    border-radius: 0 !important;
+}
+/* Remove padding between tabs */
+.tabbrowser-tab {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Move container color bar to bottom of tab */
+
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
+    margin-top: calc(var(--tab-min-height) - 2px) !important;
+}
+
+/* Emulate blue tab line from Photon 57-88 UI */
+
+/* Set size and position of the bar relative to background */
+.tab-background::before {
+  content: "";
+  display: block;
+  height: 2px;
+  margin: -1px var(--user-tab-rounding) 0;
+}
+/* Set color for active tab */
+.tabbrowser-tab[selected] .tab-background::before {
+  background-color: #0a84ff;
+}
+/* Set color for other selected tabs */
+.tabbrowser-tab[multiselected]:not([selected]) .tab-background::before {
+  background-color: color-mix(in srgb, #0a84ff 66%, transparent);
+}
+/* Set color for hovering on non-active/non-selected tabs */
+.tabbrowser-tab:not([selected], [multiselected]):hover .tab-background::before {
+  background-color: color-mix(in srgb, currentColor 33%, transparent);
+  transform: none;
+}
+/* [Optional] Animation when hovering non-active/non-selected tabs */
+
+.tabbrowser-tab:not([selected], [multiselected]) .tab-background::before {
+  transform: scaleX(.8);
+  transition: transform 100ms linear;
+}
+
+/* Adjust margin on blue tab line for squared background tabs */
+.tabbrowser-tab:not([selected], [multiselected]) .tab-background::before {
+  margin: -1px 0 0 !important;
+}
+
+/* Tweak Options as of 9/21/2021; Generated Wed Oct 13 2021 21:30:23 GMT+0200 (Central European Summer Time) */

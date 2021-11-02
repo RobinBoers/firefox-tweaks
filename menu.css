@@ -1,0 +1,44 @@
+/*AGENT_SHEET*/
+
+/************************************/
+/****** simpleMenuWizard START ******/
+
+/**********************************************
+   Modify these files themselves to your needs.
+   Do not modify the following @import block.
+   **********************************************/
+
+/*** When right-clicking on... ***/
+@import url("./menu/blank-context.css");      /* ...a blank area on a webpage                    */
+@import url("./menu/frame-context.css");      /* ...an iframe                                    */
+@import url("./menu/image-context.css");      /* ...an image                                     */
+@import url("./menu/input-context.css");      /* ...an input-field                               */
+@import url("./menu/link-context.css");       /* ...a link                                       */
+@import url("./menu/main-hamburger.css");     /* Leftclick the hamburger menu on top right       */
+@import url("./menu/main-menubar.css");       /* Leftclick on main menubar (open with ALT key)   */
+@import url("./menu/media-context.css");      /* ...media like audio or html5 video              */
+@import url("./menu/select-context.css");     /* ...selected text or selected object             */
+@import url("./menu/sidebar-context.css");    /* ...items in bookmarks- or history sidebar       */
+@import url("./menu/sidebar-header.css");     /* Leftclick on sidebar header                     */
+@import url("./menu/source-context.css");     /* ...a blank area when viewing source code        */
+@import url("./menu/tab-context.css");        /* ...a tab                                        */
+@import url("./menu/toolbar-context.css");    /* ...the toolbar or tabbar                        */
+@import url("./menu/urlbar-context.css");     /* ...the addressbar                               */
+
+
+/*** Options ***/
+
+/**********************************************************
+   How to activate or deactivate the following options:
+   Remove '/*' at the beginning of a line (not comment line) to activate the option
+   Add '/*' at the beginning of the line (not comment line) to deactivate the option
+   **********************************************************/
+
+/*** Hide all "Send <item> to Device" entries ***/
+@import url("./menu/opt_noSendToDevice.css");
+
+/*** Hide all inactive menu items ***/
+#mainPopupSet menuitem[disabled="true"] { display: none !important; }
+
+/****** menu END ******/
+/**********************************/
