@@ -111,19 +111,30 @@
   height: 2px;
   margin: -1px var(--user-tab-rounding) 0;
 }
-/* Set color for active tab */
+/* Active tab */
 .tabbrowser-tab[selected] .tab-background::before {
-  background-color: #0a84ff;
+  background-color: var(--tab-line-color);
 }
-/* Set color for other selected tabs */
+/* Selected tabs */
 .tabbrowser-tab[multiselected]:not([selected]) .tab-background::before {
-  background-color: color-mix(in srgb, #0a84ff 66%, transparent);
+  background-color: color-mix(in srgb, var(--tab-line-color) 66%, transparent);
 }
-/* Set color for hovering on non-active/non-selected tabs */
+/* non-active/non-selected tabs */
 .tabbrowser-tab:not([selected], [multiselected]):hover .tab-background::before {
   background-color: color-mix(in srgb, currentColor 33%, transparent);
   transform: none;
 }
+/* non-active/non-selected tabs (container) */
+.tabbrowser-tab[usercontextid]:not([selected], [multiselected]):hover .tab-background::before {
+    background-color: color-mix(in srgb, var(--identity-tab-color) 100%, transparent);
+    transform: none;
+    filter: brightness(20%);
+}
+/* Container tabs */
+.tabbrowser-tab[usercontextid] .tab-background::before {
+    background-color: var(--identity-tab-color);
+}
+  
 /* [Optional] Animation when hovering non-active/non-selected tabs */
 
 .tabbrowser-tab:not([selected], [multiselected]) .tab-background::before {
@@ -131,9 +142,24 @@
   transition: transform 100ms linear;
 }
 
+/* Cool container tabs */
+
+/* Hide default line */
+.tabbrowser-tab[usercontextid] .tab-context-line {
+    display: none !important;
+}
+
+/* Tab background */
+.tabbrowser-tab[usercontextid]:not([selected]) .tab-background {
+    background: var(--identity-tab-color) !important;
+    opacity: 0.6 !important;
+}
+.tabbrowser-tab[usercontextid]:not([selected]) {
+    background: var(--identity-tab-color) !important;
+}
+
 /* Adjust margin on blue tab line for squared background tabs */
 .tabbrowser-tab:not([selected], [multiselected]) .tab-background::before {
   margin: -1px 0 0 !important;
 }
-
 /* Tweak Options as of 9/21/2021; Generated Wed Oct 13 2021 21:30:23 GMT+0200 (Central European Summer Time) */
