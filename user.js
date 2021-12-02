@@ -7,6 +7,8 @@ user_pref("mozilla.widget.use-argb-visuals", true);
 user_pref("layout.css.backdrop-filter.enabled", true);
 user_pref("browser.compactmode.show", true);
 
+user_pref("services.sync.prefs.sync.lightweightThemes", false)
+
 // ** New Tab ******************************************************************
 
 user_pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar", true);
