@@ -1,0 +1,122 @@
+@-moz-document domain("trello.com"), domain("www.trello.com")
+{
+  ._1CyMivLdH2a8dA
+  {
+    display: none !important;
+  }
+
+  ._3adMU6HI9654b8 {
+    display: none !important;
+  }
+
+  ._3CuLmX8W7h9Cos, ._3CAAHVX_UQofc8[data-test-id="templates-menu"], .sc-kpOJdX.fxURuS {
+    display: none !important;
+  }
+
+  ._1I6bVWOBsN4DhX._29xy3s9y4Vtqir {
+    display: none !important;
+  }
+
+  ._32kNZW8b-DAcUd
+  {
+    display: none !important;
+  }
+
+  ._3Z6i0FBUukKNYK
+  {
+    display: none !important;
+  }
+
+  ._27QKbGhxDkdNHq
+  {
+    display: none !important;
+  }
+
+  ._2x-vl1QLZ6Q3-O
+  {
+    display: none !important;
+  }
+
+  .home-left-sidebar-container
+  {
+    display: none !important;
+  }
+
+  .boards-page-board-section-header-options
+  {
+    display: none !important;
+  }
+
+  .js-power-up-slots-container
+  {
+    display: none !important;
+  }
+/*.board-header {
+    display: none !important;
+}*/
+
+  .board-header-btn:not(.no-edit):not(.board-header-filter-btn-active)
+  {
+    background-color: transparent !important;
+  }
+
+  .js-plugin-header-btns
+  {
+    display: none !important;
+  }
+
+  .org-label
+  {
+    display: none !important;
+  }
+
+  .board-header-btns .member
+  {
+    display: none !important;
+  }
+
+  .board-header-btn-invite
+  {
+    margin-left: 0 !important;
+  }
+
+  .board-menu-navigation-item.disabled
+  {
+    display: none !important;
+  }
+
+  .quiet
+  {
+    display: none !important;
+  }
+
+  .boards-page-ad-section, .ads-layout-experiment
+  {
+    display: none !important;
+  }
+
+  ._1SbjnCnwan4fsg *
+  {
+    text-decoration: none !important;
+  }
+
+  ._2nAwZM22FU-LKV
+  {
+    display: none !important;
+  }
+
+  button
+  {
+    text-decoration: none !important;
+  }
+
+  a
+  {
+    text-decoration: none !important;
+  }
+
+  .js-billing
+  {
+    display: none !important;
+  }
+}

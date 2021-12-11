@@ -163,3 +163,13 @@
   margin: -1px 0 0 !important;
 }
 /* Tweak Options as of 9/21/2021; Generated Wed Oct 13 2021 21:30:23 GMT+0200 (Central European Summer Time) */
+
+/* Hide "Firefox Suggest", "Google Suggestions" and other labels */
+  .urlbarView-row[label]::before {
+    /* Suppress the text */
+    display: none !important;
+  }
+  .urlbarView-row[label] {
+    /* Remove the empty space */
+    margin-block-start: 0 !important;
+  }
