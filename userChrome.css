@@ -1,0 +1,9 @@
+@import url("./lepton.css");
+@import url("./menu.css"); 
+@import url("./photon.css");
+
+/* Tab borders */
+
+.tabbrowser-tab *, .tabbrowser-tab {
+    box-shadow: none !important;
+}

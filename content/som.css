@@ -1,0 +1,596 @@
+/**************************************************************************************************************************\
+
+
+ ________  ________  _____ ______   _________  ________  ________  ________      ___    ___       _______      ________     
+|\   ____\|\   __  \|\   _ \  _   \|\___   ___\\   __  \|\   ___ \|\   __  \    |\  \  /  /|     /  ___  \    |\   __  \    
+\ \  \___|\ \  \|\  \ \  \\\__\ \  \|___ \  \_\ \  \|\  \ \  \_|\ \ \  \|\  \   \ \  \/  / /    /__/|_/  /|   \ \  \|\  \   
+ \ \_____  \ \  \\\  \ \  \\|__| \  \   \ \  \ \ \  \\\  \ \  \ \\ \ \   __  \   \ \    / /     |__|//  / /    \ \  \\\  \  
+  \|____|\  \ \  \\\  \ \  \    \ \  \   \ \  \ \ \  \\\  \ \  \_\\ \ \  \ \  \   \/  /  /          /  /_/__  __\ \  \\\  \ 
+    ____\_\  \ \_______\ \__\    \ \__\   \ \__\ \ \_______\ \_______\ \__\ \__\__/  / /           |\________\\__\ \_______\
+   |\_________\|_______|\|__|     \|__|    \|__|  \|_______|\|_______|\|__|\|__|\___/ /             \|_______\|__|\|_______|
+   \|_________|                                                                \|___|/                                      
+                                                                                                                            
+        A USERSTYLE DESIGNED AND DEVELOPED BY ROBIN BOERS TO CLEAN UP THE SOMtoday ELO. INSPIRED BY SOMtoday DOCENT.  
+                                                                                                                            
+\**************************************************************************************************************************/
+
+@-moz-document domain("elo.somtoday.nl") {
+    :root {
+        --accent: #ffc600;
+        --main: #005eb5;
+        --main-dark: #0d3b5e;
+        --main-light: #3391eb;
+        --bg: linear-gradient(to right, transparent 0%, transparent 50%, #fff 50%, #fff 100%);
+        --bg-solid: #ffffff;
+        --gray: #e2e9ee;
+        --gray-border: #e2e9ee;
+        --text: #000000;
+    }
+
+    html,
+    body {
+        font-family: "Inter", Roboto, sans-serif !important;
+        font-size: 15px !important;
+        background-color: var(--bg) !important;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: var(--text) !important;
+    }
+
+    #header-wrapper {
+        background-color: var(--bg) !important;
+    }
+    #header-wrapper *:not(.logo) {
+        background: transparent !important;
+        background-color: transparent !important;
+        color: var(--main) !important;
+    }
+
+    .logo {
+        background-image: url(https://som.today/wp-content/uploads/2019/07/logo-blue.svg) !important;
+    }
+
+    .date,
+    .version,
+    #user img,
+    #inbox-counter,
+    #idea {
+        display: none !important;
+    }
+
+    .today {
+        border-bottom: 3px solid var(--accent) !important;
+    }
+
+    .ribbon .chk,
+    .ribbon.chk {
+        color: var(--main-dark) !important;
+        border-bottom: none !important;
+    }
+
+    .ribbon .chk.checked,
+    .ribbon.chk.checked {
+        color: var(--main) !important;
+    }
+
+    .ribbon .chk:hover,
+    .ribbon.chk:hover {
+        color: var(--main-light) !important;
+    }
+
+    .yellow.ribbon p span {
+        display: none !important;
+    }
+
+    .yellow.ribbon a.IconFont {
+        background-color: var(--bg-solid) !important;
+    }
+
+    .d-next,
+    .d-prev {
+        border-color: var(--main) !important;
+    }
+    .d-next:hover,
+    .d-prev:hover {
+        border-color: var(--main-light) !important;
+    }
+
+    .leermiddelen #master-panel {
+        display: none !important;
+    }
+    .leermiddelen #detail-panel-wrapper,
+    .leermiddelen #detail-panel {
+        display: block !important;
+        width: 100% !important;
+        border: none !important;
+    }
+    .leermiddelen .double {
+        max-width: 200px !important;
+    }
+
+    #main-menu a {
+        color: white !important;
+        background: transparent !important;
+    }
+
+    #main-menu a.active,
+    #main-menu a.active:hover,
+    #main-menu a:hover {
+        color: var(--main) !important;
+        background: var(--bg-solid) !important;
+    }
+
+    #main-menu-bottom {
+        display: none !important;
+    }
+
+    #content-wrapper,
+    #header-wrapper,
+    #main-menu-wrapper {
+        padding-left: 0 !important;
+    }
+
+    #main-menu-wrapper {
+        /* background: #e7f0f5 !important; */
+        background: var(--main) !important;
+    }
+
+    #detail-panel-wrapper,
+    #detail-panel {
+        background-color: var(--bg) !important;
+    }
+
+    #header {
+        margin-bottom: 0 !important;
+    }
+
+    #main-menu-bottom {
+        width: 100% !important;
+    }
+
+    #content {
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    .homeworkaster .date {
+        display: block !important;
+    }
+    .icon-huiswerk {
+        background: var(--accent) !important;
+    }
+    .type {
+        background-color: #fcfeff !important;
+        border: 2px solid var(--gray) !important;
+    }
+    #master-panel .date div {
+        background-color: #fcfeff !important;
+        border: 2px solid var(--gray) !important;
+    }
+    .afspraak {
+        background-color: #fcfeff !important;
+        border: 2px solid var(--gray) !important;
+        border-radius: 7px !important;
+    }
+    .afspraak > * {
+        color: #99a8c0 !important;
+    }
+    .afspraak .toekenning {
+        background-color: transparent !important;
+    }
+
+    #master-panel .date div,
+    .pauze,
+    .roster-table-header .day .huiswerk-items,
+    .uurNummer {
+        background: #ffffff00 !important;
+    }
+
+    .icon-geen-van-beide,
+    .icon-leermiddelen,
+    .icon-studiewijzer {
+        background: transparent !important;
+    }
+
+    .afspraakVakNaam {
+        color: var(--main) !important;
+    }
+
+    .panel-header h1 {
+        font-size: 30px !important;
+    }
+    .section > h3,
+    .jaarbijlagen-header h3 {
+        font-size: 20px !important;
+        padding-top: 4px !important;
+        border-bottom: none !important;
+    }
+
+    .vakkenDetail .panel-header .r-content .sub {
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+    }
+    .bericht.r-content .r-content .sub span:first-child {
+        display: none !important;
+    }
+    .bericht .pasfoto {
+        display: none !important;
+    }
+
+    .button-silver-deluxe {
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    .button-silver-deluxe span,
+    .section a.right {
+        padding: 8px 16px !important;
+        margin-left: 8px !important;
+
+        color: var(--main-light) !important;
+        font-weight: 600 !important;
+        background: #fff !important;
+        border: 2px solid #e2e9ee !important;
+        border-radius: 5px !important;
+    }
+
+    .button-silver-deluxe span {
+        margin-right: 6px;
+    }
+
+    .button-silver-deluxe span:hover,
+    .section a.right:hover {
+        background: #d5eaff !important;
+        border: 2px solid var(--main-light) !important;
+    }
+
+    .conversation {
+        border-top: 1px solid var(--gray) !important;
+    }
+
+    a {
+        color: var(--main);
+    }
+
+    .title div.block.content {
+        margin: 40px 7px 0 7px !important;
+        background: var(--main) !important;
+        border: none !important;
+        color: white !important;
+    }
+
+    .block,
+    .section .block {
+        border-color: var(--gray) !important;
+        background-color: var(--main-solid) !important;
+    }
+
+    #master-panel,
+    .panel-header,
+    #details-panel-wrapper,
+    .m-element {
+        background-color: var(--bg-solid) !important;
+        border-color: var(--gray-border) !important;
+        color: var(--text) !important;
+    }
+
+    #master-panel ~ #detail-panel-wrapper {
+        border-left: 1px solid var(--gray-border) !important;
+    }
+
+    #master-panel .date div p.date-day {
+        background-color: var(--bg-solid) !important;
+    }
+
+    .m-wrapper.active {
+        background: var(--bg-solid) !important;
+    }
+
+    input[type="password"],
+    input[type="text"],
+    input[type="url"],
+    .invoerVeld {
+        background-image: none !important;
+    }
+
+    .wysiwyg {
+        overflow: hidden;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --bg: rgb(27, 28, 29);
+            --bg-solid: rgb(27, 28, 29);
+            --gray: rgb(43, 60, 73);
+            --gray-border: rgb(43, 60, 73);
+            --text: #ffffff;
+        }
+
+        .box {
+            background-color: rgb(24, 26, 27) !important;
+            border-color: rgb(43, 60, 73) !important;
+            color: rgb(219, 216, 211) !important;
+        }
+
+        #main-menu a.active,
+        #main-menu a.active:hover,
+        #main-menu a:hover {
+            color: white !important;
+        }
+
+        html,
+        body {
+            color: white;
+        }
+
+        .logo {
+            background-image: url(https://elo.somtoday.nl/images/logo-somtoday-small-ver-9CF87D5E673971B01F71593D4A4FA106.svg) !important;
+        }
+
+        #header-wrapper :not(.logo) {
+            color: #99a8c0 !important;
+        }
+
+        .type {
+            background-color: rgb(47, 49, 51) !important;
+            color: var(--text) !important;
+        }
+
+        .jaarbijlagen .bijlagen-container,
+        .jaarbijlagen .jaarbijlage-map {
+            background-color: rgb(24, 26, 27);
+            border-color: rgb(43, 60, 73);
+        }
+
+        .button-silver-deluxe span,
+        .section a.right {
+            color: var(--text) !important;
+            background: rgb(47, 49, 51) !important;
+            border: 2px solid var(--gray) !important;
+        }
+
+        .button-silver-deluxe span:hover,
+        .section a.right:hover {
+            background: rgb(70, 72, 74) !important;
+            border: 2px solid var(--main-light) !important;
+        }
+
+        * {
+            scrollbar-color: #454a4d #202324;
+        }
+
+        h1 {
+            color: var(--text) !important;
+        }
+
+        /* Generated by DarkReader (thanks!) */
+
+        a,
+        b,
+        div,
+        form,
+        html,
+        i,
+        img,
+        input,
+        li,
+        p,
+        span,
+        ul {
+            border-color: currentcolor;
+        }
+
+        input,
+        textarea,
+        select,
+        button {
+            background-color: #181a1b !important;
+            border-color: #736b5e !important;
+            color: #e8e6e3 !important;
+        }
+
+        ::placeholder {
+            opacity: 0.5 !important;
+        }
+        ::placeholder {
+            color: #b2aba1 !important;
+        }
+
+        #content {
+            background-color: rgb(24, 26, 27) !important;
+        }
+        .r-content {
+            color: rgb(205, 200, 194) !important;
+        }
+
+        .dayTitle {
+            border-bottom-color: rgb(56, 61, 64) !important;
+            background-color: rgb(24, 26, 27) !important;
+            background-image: none !important;
+        }
+        #master-panel .date div,
+        .pauze,
+        .roster-table-header .day .huiswerk-items,
+        .uurNummer {
+            background-color: rgb(28, 31, 32) !important;
+            background-image: none !important;
+        }
+        .roster-table-header .geen-items {
+            color: rgb(183, 176, 167) !important;
+        }
+        .roster-table-content .day {
+            border-top-color: rgb(56, 61, 64) !important;
+        }
+        .day {
+            border-left-color: rgb(56, 61, 64) !important;
+        }
+        .roster-table-content .hours {
+            border-top-color: rgb(56, 61, 64) !important;
+        }
+        .roster-table-header {
+            border-top-color: rgb(40, 66, 74) !important;
+            border-bottom-color: currentcolor !important;
+        }
+        .roster-table-content .hours .hour {
+            border-top-color: rgb(40, 66, 74) !important;
+            border-bottom-color: rgb(40, 66, 74) !important;
+        }
+        .roster-table-header .day,
+        .roster-table-header .today {
+            color: rgb(166, 158, 147) !important;
+        }
+        .roster-table-header .day {
+            background-color: rgb(29, 32, 33) !important;
+            background-image: none !important;
+        }
+
+        .sub.homework {
+            color: rgb(160, 181, 201) !important;
+        }
+        .sub.homework .deadline {
+            color: rgb(219, 216, 211) !important;
+        }
+        .studiewijzerdescription {
+            color: rgb(219, 216, 211) !important;
+        }
+        .huiswerk {
+            color: rgb(160, 181, 201) !important;
+        }
+        .huiswerk .onderwerp {
+            color: rgb(219, 216, 211) !important;
+        }
+
+        #master-panel .date div p.date-day,
+        #master-panel .date div p.date-month,
+        #master-panel .date span {
+            color: rgb(94, 183, 255) !important;
+        }
+
+        .blue.ribbon p {
+            background-color: rgba(0, 0, 0, 0) !important;
+            background-image: none !important;
+            color: rgb(110, 191, 255) !important;
+        }
+        .blue.ribbon .icon-check,
+        .blue.ribbon .icon-check-empty {
+            color: rgb(110, 191, 255) !important;
+        }
+
+        .yellow.ribbon a {
+            color: rgb(110, 191, 255) !important;
+        }
+        .yellow.ribbon a:hover {
+            background-color: rgb(24, 26, 27) !important;
+            background-image: none !important;
+        }
+
+        .load-more:active,
+        .section {
+            color: rgb(168, 160, 149) !important;
+        }
+        .gperiod.expand .tog-noperiod,
+        .tog-level {
+            color: rgb(146, 174, 192) !important;
+            border-color: rgb(24, 79, 102) !important;
+            background-color: rgb(28, 31, 32) !important;
+        }
+        .gperiod .tog-period,
+        .gperiod.expand .tog-period {
+            border-color: rgb(24, 79, 102) !important;
+            color: rgb(168, 160, 149) !important;
+        }
+        .glevel {
+            border-color: rgb(24, 79, 102) !important;
+            background-color: rgb(24, 26, 27) !important;
+        }
+        .glevel.expanded .tog-level,
+        .tog-level.expanded {
+            color: rgb(146, 174, 192) !important;
+        }
+        .section .grade,
+        .section .weging {
+            background-color: rgb(24, 26, 27) !important;
+            background-image: none !important;
+        }
+
+        .afspraak {
+            background-color: var(--bg) !important;
+        }
+        .afspraak > *,
+        .afspraakTijden {
+            color: rgb(205, 200, 194) !important;
+        }
+        .toekenning a {
+            color: rgb(205, 200, 194) !important;
+        }
+
+        .jaarbijlagen .bijlagen-container,
+        .jaarbijlagen .jaarbijlage-map {
+            background-color: rgb(24, 26, 27) !important;
+            border-color: rgb(43, 60, 73) !important;
+        }
+        .jaarbijlagen .jaarbijlage {
+            background-color: rgb(28, 31, 32) !important;
+            border-color: rgb(43, 60, 73) !important;
+        }
+        .jaarbijlagen .jaarbijlage .jaarbijlage-extensie {
+            background-color: rgb(32, 35, 36) !important;
+            color: rgb(94, 183, 255) !important;
+        }
+
+        .button-silver-deluxe span,
+        .button-silver-deluxe:focus span,
+        .button-silver-deluxe:hover span {
+            text-shadow: rgb(24, 26, 27) 1px 1px !important;
+        }
+
+        input[type="password"],
+        input[type="text"],
+        input[type="url"],
+        .invoerVeld {
+            border-color: rgb(67, 72, 75) !important;
+            background-color: rgb(24, 26, 27) !important;
+        }
+        div.wysiwyg div.toolbar-wrap {
+            border-bottom-color: rgb(62, 68, 70) !important;
+        }
+        div.wysiwyg ul.toolbar li.separator {
+            background-color: rgba(0, 0, 0, 0) !important;
+            background-image: none !important;
+            border-color: currentcolor currentcolor currentcolor rgb(62, 68, 70) !important;
+        }
+
+        .m-element,
+        div.m-wrapperTable table tr td {
+            border-color: rgb(56, 61, 64) !important;
+        }
+        .profileDetail {
+            color: #fff !important;
+        }
+
+        ::selection {
+            background-color: #004daa !important;
+            color: #e8e6e3 !important;
+        }
+    }
+}
+
+/**************************************************************************************************************************\
+
+             ,d        ,88~~\   [~~~~d88P 
+Y88b    / ,d888       d888   \      d88P  
+ Y88b  /    888      88888    |    d88P   
+  Y88b/     888      88888    |   d88P    
+   Y8/      888 d88b  Y888   /   d88P     
+    Y       888 Y88P   `88__/   d88P      
+
+
+01100111 01100101 01101000 01100101 01101001 01101101 01100101 01110011 01101001 01110100 01100101 00101110 01101110 01101100
+                            
+\**************************************************************************************************************************/
