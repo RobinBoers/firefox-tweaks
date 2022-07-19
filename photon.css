@@ -8,24 +8,24 @@
 #toolbar-menubar menupopup,
 /* Sidebar/Library bookmark/history context menus */
 #placesContext {
-  /* Text color */
-  --menu-color: #000 !important;
-  --arrowpanel-color: #000 !important;
-  --panel-color: #000 !important;
-  /* Background color */
-  --menu-background-color:  #f0f0f0 !important;
-  --arrowpanel-background: #f0f0f0 !important;
-  --panel-background: #f0f0f0 !important;
-  /* Border color (if any) */
-  --menu-border-color: threedshadow !important;
-  --arrowpanel-border-color: threedshadow !important;
-  --panel-border-color: threedshadow !important;
-  /* Hovered/expanded item background color */
-  --menuitem-hover-background-color: #e0e0e6 !important;
-  --button-hover-bgcolor: #e0e0e6 !important;
-  /* Disabled items text color and hovered background */
-  --menu-disabled-color: rgba(21, 20, 26, 0.4) !important;
-  --menuitem-disabled-hover-background-color: rgba(224, 224, 230, 0.4) !important;
+    /* Text color */
+    --menu-color: #000 !important;
+    --arrowpanel-color: #000 !important;
+    --panel-color: #000 !important;
+    /* Background color */
+    --menu-background-color: #f0f0f0 !important;
+    --arrowpanel-background: #f0f0f0 !important;
+    --panel-background: #f0f0f0 !important;
+    /* Border color (if any) */
+    --menu-border-color: threedshadow !important;
+    --arrowpanel-border-color: threedshadow !important;
+    --panel-border-color: threedshadow !important;
+    /* Hovered/expanded item background color */
+    --menuitem-hover-background-color: #e0e0e6 !important;
+    --button-hover-bgcolor: #e0e0e6 !important;
+    /* Disabled items text color and hovered background */
+    --menu-disabled-color: rgba(21, 20, 26, 0.4) !important;
+    --menuitem-disabled-hover-background-color: rgba(224, 224, 230, 0.4) !important;
 }
 
 /*** Proton Tabs Tweaks ***/
@@ -40,7 +40,9 @@
     border-radius: var(--user-tab-rounding) var(--user-tab-rounding) 0px 0px !important;
     margin-block: 1px 0 !important;
 }
-#scrollbutton-up, #scrollbutton-down { /* 6/10/2021 */
+#scrollbutton-up,
+#scrollbutton-down {
+    /* 6/10/2021 */
     border-top-width: 1px !important;
     border-bottom-width: 0 !important;
 }
@@ -51,11 +53,12 @@
 
 /* Override Normal Density height to Compact Density height only for tabs */
 
-#TabsToolbar, #tabbrowser-tabs {
+#TabsToolbar,
+#tabbrowser-tabs {
     --tab-min-height: 31px !important;
 }
-    /* Tweak for covering a line at the bottom of the active tab on some themes 8/11/2021 */
-#main-window[sizemode="normal"] #toolbar-menubar[autohide="true"] + #TabsToolbar, 
+/* Tweak for covering a line at the bottom of the active tab on some themes 8/11/2021 */
+#main-window[sizemode="normal"] #toolbar-menubar[autohide="true"] + #TabsToolbar,
 #main-window[sizemode="normal"] #toolbar-menubar[autohide="true"] + #TabsToolbar #tabbrowser-tabs {
     --tab-min-height: 30px !important;
 }
@@ -65,29 +68,33 @@
     border-bottom-width: 0 !important;
 }
 
-    /* [Connected Tabs] Set a max height based on min-height plus margin-block: 1px 0 */
-#TabsToolbar, #TabsToolbar > hbox, #TabsToolbar-customization-target, #tabbrowser-arrowscrollbox  {
+/* [Connected Tabs] Set a max height based on min-height plus margin-block: 1px 0 */
+#TabsToolbar,
+#TabsToolbar > hbox,
+#TabsToolbar-customization-target,
+#tabbrowser-arrowscrollbox {
     max-height: calc(var(--tab-min-height) + 1px) !important;
 }
-    /* [Connected Tabs] Adjust padding around icons on buttons to avoid crushed images */
-#TabsToolbar-customization-target toolbarbutton > .toolbarbutton-icon, 
-#TabsToolbar-customization-target .toolbarbutton-text, 
+/* [Connected Tabs] Adjust padding around icons on buttons to avoid crushed images */
+#TabsToolbar-customization-target toolbarbutton > .toolbarbutton-icon,
+#TabsToolbar-customization-target .toolbarbutton-text,
 #TabsToolbar-customization-target .toolbarbutton-badge-stack,
-#scrollbutton-up,#scrollbutton-down {
+#scrollbutton-up,
+#scrollbutton-down {
     padding-top: 7px !important;
     padding-bottom: 6px !important;
 }
 
 /* Inactive tabs: Separator line style */
 
-.tabbrowser-tab:not([selected=true]):not([multiselected=true]):not([beforeselected-visible="true"]) .tab-background {
-    border-right: 1px solid var(--lwt-background-tab-separator-color, rgba(0, 0, 0, .20)) !important;
+.tabbrowser-tab:not([selected="true"]):not([multiselected="true"]):not([beforeselected-visible="true"]) .tab-background {
+    border-right: 1px solid var(--lwt-background-tab-separator-color, rgba(0, 0, 0, 0.2)) !important;
 }
 /* For dark backgrounds */
-[brighttext="true"] .tabbrowser-tab:not([selected=true]):not([multiselected=true]):not([beforeselected-visible="true"]) .tab-background {
-    border-right: 1px solid var(--lwt-background-tab-separator-color, var(--lwt-selected-tab-background-color, rgba(255, 255, 255, .20))) !important;
+[brighttext="true"] .tabbrowser-tab:not([selected="true"]):not([multiselected="true"]):not([beforeselected-visible="true"]) .tab-background {
+    border-right: 1px solid var(--lwt-background-tab-separator-color, var(--lwt-selected-tab-background-color, rgba(255, 255, 255, 0.2))) !important;
 }
-.tabbrowser-tab:not([selected=true]):not([multiselected=true]) .tab-background {
+.tabbrowser-tab:not([selected="true"]):not([multiselected="true"]) .tab-background {
     border-radius: 0 !important;
 }
 /* Remove padding between tabs */
@@ -106,27 +113,27 @@
 
 /* Set size and position of the bar relative to background */
 .tab-background::before {
-  content: "";
-  display: block;
-  height: 2px;
-  margin: -1px var(--user-tab-rounding) 0;
+    content: "";
+    display: block;
+    height: 2px;
+    margin: -1px var(--user-tab-rounding) 0;
 }
 /* Active tab */
 .tabbrowser-tab[selected] .tab-background::before {
-  background-color: var(--lwt-tab-line-color);
+    background-color: var(--lwt-tab-line-color);
 }
 
 .tab-background:-moz-lwtheme {
-  border: none !important;
+    border: none !important;
 }
 /* Selected tabs */
 .tabbrowser-tab[multiselected]:not([selected]) .tab-background::before {
-  background-color: color-mix(in srgb, var(--lwt-tab-line-color) 66%, transparent);
+    background-color: color-mix(in srgb, var(--lwt-tab-line-color) 66%, transparent);
 }
 /* non-active/non-selected tabs */
 .tabbrowser-tab:not([selected], [multiselected]):hover .tab-background::before {
-  background-color: color-mix(in srgb, currentColor 33%, transparent);
-  transform: none;
+    background-color: color-mix(in srgb, currentColor 33%, transparent);
+    transform: none;
 }
 /* non-active/non-selected tabs (container) */
 .tabbrowser-tab[usercontextid]:not([selected], [multiselected]):hover .tab-background::before {
@@ -138,12 +145,12 @@
 .tabbrowser-tab[usercontextid] .tab-background::before {
     background-color: var(--identity-tab-color);
 }
-  
+
 /* [Optional] Animation when hovering non-active/non-selected tabs */
 
 .tabbrowser-tab:not([selected], [multiselected]) .tab-background::before {
-  transform: scaleX(.8);
-  transition: transform 100ms linear;
+    transform: scaleX(0.8);
+    transition: transform 100ms linear;
 }
 
 /* Cool container tabs */
@@ -164,36 +171,39 @@
 
 /* Adjust margin on blue tab line for squared background tabs */
 .tabbrowser-tab:not([selected], [multiselected]) .tab-background::before {
-  margin: -1px 0 0 !important;
+    margin: -1px 0 0 !important;
 }
 /* Tweak Options as of 9/21/2021; Generated Wed Oct 13 2021 21:30:23 GMT+0200 (Central European Summer Time) */
 
 /* Hide "Firefox Suggest", "Google Suggestions" and other labels */
-  .urlbarView-row[label]::before {
+.urlbarView-row[label]::before {
     /* Suppress the text */
     display: none !important;
-  }
-  .urlbarView-row[label] {
+}
+.urlbarView-row[label] {
     /* Remove the empty space */
     margin-block-start: 0 !important;
-  }
-
+}
 
 /*** Tighten up drop-down/context/popup menu spacing (8 Sep 2021) ***/
 
-menupopup:not(.in-menulist) > menuitem, 
+menupopup:not(.in-menulist) > menuitem,
 menupopup:not(.in-menulist) > menu {
-  padding-block: 4px !important; /* reduce to 3px, 2px, 1px or 0px as needed */ 
-  min-height: unset !important; /* v92.0 - for padding below 4px */
+    padding-block: 4px !important; /* reduce to 3px, 2px, 1px or 0px as needed */
+    min-height: unset !important; /* v92.0 - for padding below 4px */
 }
 :root {
-  --arrowpanel-menuitem-padding: 4px 8px !important;
+    --arrowpanel-menuitem-padding: 4px 8px !important;
 }
 
 /* Less rounded corners for menu items */
 
-#PlacesToolbar menu, .subview-subheader, panelview .toolbarbutton-1, .subviewbutton, .widget-overflow-list .toolbarbutton-1 {
-        border-radius: 3px !important;
+#PlacesToolbar menu,
+.subview-subheader,
+panelview .toolbarbutton-1,
+.subviewbutton,
+.widget-overflow-list .toolbarbutton-1 {
+    border-radius: 3px !important;
 }
 
 /* Old back button */
@@ -210,4 +220,3 @@ menupopup:not(.in-menulist) > menu {
     padding: 7px !important;
     transform: scale(1.1) translateX(1px);
 }
-
