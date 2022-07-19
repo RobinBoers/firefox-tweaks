@@ -9,7 +9,7 @@
 
     .infobar,
     .searchpane {
-        margin: 5px 5px 5px 0px !important;
+        margin: 5px 5px 5px 0 !important;
     }
 
     .nav-buttons {
@@ -48,14 +48,14 @@
     /* HEADER */
     #header {
         background: none !important;
-        border-bottom: 0px !important;
+        border-bottom: 0 !important;
         height: 150px !important;
     }
 
     #sr-header-area {
         background: #fff !important;
         text-transform: capitalize !important;
-        border-bottom: 0px !important;
+        border-bottom: 0 !important;
         padding: 8px 0 12px 0 !important;
         height: 10px !important;
         overflow: hidden;
@@ -69,7 +69,7 @@
     }
 
     .drop-choices {
-        border: 0px !important;
+        border: 0 !important;
         border-left: 1px solid #eee !important;
         border-bottom: 1px solid #eee !important;
         padding: 10px !important;
@@ -77,20 +77,22 @@
         -webkit-border-bottom-right-radius: 5px;
         -moz-border-radius-bottomright: 5px;
         -moz-border-radius-bottomleft: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
         -moz-box-shadow: 10px 10px 10px -10px #888;
         -webkit-box-shadow: 10px 10px 10px -10px #888;
+        box-shadow: 10px 10px 10px -10px #888;
     }
 
     #sr-more-link {
         background: #fff !important;
-        /*top: 8px !important;*/
         color: orangered !important;
     }
 
     .tabmenu {
         position: absolute;
         bottom: 20px;
-        left: 0px;
+        left: 0;
     }
 
     .tabmenu li {
@@ -98,7 +100,7 @@
     }
 
     .tabmenu li a {
-        border: 0px !important;
+        border: 0 !important;
         padding: 10px 15px !important;
         background: none !important;
         color: #494949 !important;
@@ -109,9 +111,11 @@
         background: #fff !important;
         color: orangered !important;
         -moz-border-radius: 10px !important;
-        -moz-box-shadow: 1px 1px #c1dbf5 !important;
         -webkit-border-radius: 10px !important;
+        border-radius: 10px !important;
+        -moz-box-shadow: 1px 1px #c1dbf5 !important;
         -webkit-box-shadow: 1px 1px #c1dbf5 !important;
+        box-shadow: 1px 1px #c1dbf5 !important;
     }
 
     #header-img-a {
@@ -127,9 +131,6 @@
     .redditname,
     .pagename {
         color: #494949 !important;
-        /*position: absolute !important;
-    top: 40px;
-    right: 0px;*/
         margin: 0 !important;
         font-size: 11px !important;
         font-variant: normal !important;
@@ -143,8 +144,6 @@
         font-variant: normal !important;
         margin: 0 !important;
     }
-    /*.redditname {display: none !important;}
-.pagename {display:none} */
 
     #header-bottom-right {
         background: none !important;
@@ -177,9 +176,11 @@
         width: 655px !important;
         overflow: hidden;
         -moz-border-radius: 10px;
-        -moz-box-shadow: 1px 1px #c1dbf5 !important;
         -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -moz-box-shadow: 1px 1px #c1dbf5 !important;
         -webkit-box-shadow: 1px 1px #c1dbf5 !important;
+        box-shadow: 1px 1px #c1dbf5 !important;
     }
 
     .content .content {
@@ -187,6 +188,7 @@
         width: auto !important;
         -moz-box-shadow: none !important;
         -webkit-box-shadow: none !important;
+        box-shadow: none !important;
         position: relative;
     }
 
@@ -205,14 +207,17 @@
         background: #fff !important;
         margin: 0 0 15px 0 !important;
         -moz-border-radius: 10px;
-        -moz-box-shadow: 1px 1px #c1dbf5 !important;
         -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -moz-box-shadow: 1px 1px #c1dbf5 !important;
         -webkit-box-shadow: 1px 1px #c1dbf5 !important;
+        box-shadow: 1px 1px #c1dbf5 !important;
     }
 
     .side .spacer:first-of-type {
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
+        border-radius: 10px;
     }
 
     .side .spacer #search input {
@@ -240,16 +245,18 @@
         border: 0 !important;
         -moz-box-shadow: none !important;
         -webkit-box-shadow: none !important;
+        box-shadow: none !important;
     }
 
     .fancy-toggle-button a {
         color: #fff !important;
         font-size: 15px !important;
         font-weight: bold !important;
-        border: 0px !important;
+        border: 0 !important;
         padding: 4px 8px !important;
         -moz-border-radius: 5px !important;
         -webkit-border-radius: 5px !important;
+        border-radius: 5px !important;
     }
 
     .fancy-toggle-button .remove {
@@ -295,15 +302,18 @@
         border: 0 !important;
         -moz-border-radius: 5px !important;
         -webkit-border-radius: 5px !important;
+        border-radius: 5px !important;
         padding: 0 !important;
         -moz-box-shadow: 1px 1px #7fc3e6 !important;
         -webkit-box-shadow: 1px 1px #7fc3e6 !important;
+        box-shadow: 1px 1px #7fc3e6 !important;
     }
 
     .morelink:hover {
         background: orangered !important;
         -moz-box-shadow: 1px 1px red !important;
         -webkit-box-shadow: 1px 1px red !important;
+        box-shadow: 1px 1px red !important;
     }
 
     .morelink a {
@@ -322,6 +332,7 @@
         min-height: 0 !important;
         -moz-box-shadow: none !important;
         -webkit-box-shadow: none !important;
+        box-shadow: none !important;
     }
 
     .sponsorshipbox.thing {
@@ -420,15 +431,13 @@
         color: #43a1cf !important;
     }
 
-    /*.dropdown.lightdrop .selected {border: 0 !important;padding: 2px 5px !important;-moz-border-radius:5px;-webkit-border-radius:5px;}
-.drop-choices.lightdrop a.choice {padding: 2px 5px !important;-moz-border-radius:5px;-webkit-border-radius:5px;} */
     .menuarea .drop-choices {
         border-left: 1px solid #eee !important;
         border-bottom: 1px solid #eee !important;
     }
 
     .comment {
-        border-bottom: 0px solid gray !important;
+        border-bottom: 0 solid gray !important;
         padding: 0 !important;
         margin: 0 0 20px 0 !important;
     }
@@ -440,7 +449,7 @@
     }
 
     .morechildren {
-        border-bottom: 0px solid gray !important;
+        border-bottom: 0 solid gray !important;
         padding: 0 0 0 25px !important;
     }
 
@@ -467,22 +476,8 @@
         margin: 0 0 20px 0 !important;
     }
 
-    .footer .col a {
-        /*color: #43a1cf !important;*/
-    }
-
     .footer .col:first-of-type {
-        border-left: 0px !important;
+        border-left: 0 !important;
         padding: 10px 20px 10px 0 !important;
-    }
-
-    .flat-vert.title {
-        /*color: #fff !important;
-    text-shadow: 1px 1px #c1dbf5;*/
-    }
-
-    .bottommenu,
-    .bottommenu a {
-        /*color: #fff !important;*/
     }
 }
