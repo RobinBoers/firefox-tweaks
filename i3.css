@@ -18,13 +18,6 @@
   --tab-min-height: 27px !important;
 }
 
-/* --- GENERAL DEBLOAT ---------------------------------- */
-
-/* Bottom left page loading status or url preview */
-#statuspanel {
-  display: none !important;
-}
-
 /* --- DEBLOAT NAVBAR ----------------------------------- */
 
 #back-button {
@@ -39,76 +32,13 @@
 #nav-bar-overflow-button {
   display: none !important;
 }
-
-/* General Firefox menu button */
 #PanelUI-button {
   display: none;
 }
-
-/* Empty space before and after the url bar */
-#customizableui-special-spring1,
-#customizableui-special-spring2 {
-  display: none;
-}
-
 #nav-bar,
 #navigator-toolbox {
   border-width: 0 !important;
   --toolbar-field-focus-border-color: #42414d;
-}
-
-/* --- STYLE URLBAR ------------------------------------- */
-
-#urlbar-container {
-  --urlbar-container-height: var(--tab-min-height) !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-#urlbar {
-  --urlbar-height: var(--tab-min-height) !important;
-  --urlbar-toolbar-height: var(--tab-min-height) !important;
-  min-height: var(--tab-min-height) !important;
-  border-color: var(
-    --lwt-toolbar-field-border-color,
-    hsla(240, 5%, 5%, 0.25)
-  ) !important;
-  --autocomplete-popup-highlight-background: transparent !important;
-}
-
-#urlbar-background {
-  border-width: 0 !important;
-  border-radius: 0 !important;
-}
-
-#urlbar-input-container {
-  border-width: 0 !important;
-  margin-left: 1em !important;
-}
-
-#urlbar-input {
-  margin-left: 0.4em !important;
-  margin-right: 0.4em !important;
-}
-
-.urlbarView-row {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  line-height: var(--urlbar-height) !important;
-}
-
-.urlbarView-row-inner {
-  padding-top: 0.3em !important;
-  padding-bottom: 0.3em !important;
-  height: var(--urlbar-height) !important;
-}
-
-.urlbarView-favicon {
-  height: 1em !important;
-  width: 1em !important;
-  margin-bottom: 0.2em !important;
 }
 
 /* --- DEBLOAT URLBAR ----------------------------------- */
@@ -152,6 +82,11 @@
   display: none !important;
 }
 
+/* add padding back */
+.urlbar-input-box {
+  padding-inline-start: 5px;
+}
+
 /* --- STYLE TAB TOOLBAR -------------------------------- */
 
 #titlebar {
@@ -183,7 +118,6 @@ tab:not([selected="true"]) {
 
 tab {
   font-family: var(--font-mono), monospace;
-  font-weight: bold;
   border: none !important;
 }
 
@@ -254,7 +188,6 @@ tab:only-of-type {
   border: none !important;
 }
 
-/*AGENT_SHEET*/
 #main-window #navigator-toolbox #TabsToolbar:not(:-moz-lwtheme) {
   background: var(--tab-active-color) !important;
 }
@@ -301,26 +234,27 @@ tab:only-of-type {
 /* --- AUTOHIDE URLBAR ---------------------------------- */
 
 /* hide urlbar unless focused */
-#nav-bar {
-  min-height: 0 !important;
-  max-height: 0 !important;
-  height: 0 !important;
-  --moz-transform: scaleY(0) !important;
-  transform: scaleY(0) !important;
+:root {
+  --address-bar-height: 40px;
+  --browser-offset: calc(-1 * (var(--address-bar-height) + 1px));
+}
+#navigator-toolbox-background {
+  position: absolute !important;;
+}
+#navigator-toolbox-background ~ #browser {
+  margin-top: var(--browser-offset) !important;
+}
+/* #navigator-toolbox-background:hover, */
+#navigator-toolbox-background:focus-within {
+  z-index: 9001 !important;
 }
 
-/* #titlebar:hover~#nav-bar, */
-/* #nav-bar:hover, */
-#nav-bar:focus-within {
-  --moz-transform: scale(1) !important;
-  transform: scale(1) !important;
-  max-height: var(--urlbar-height) !important;
-  height: var(--urlbar-height) !important;
-  min-height: var(--urlbar-height) !important;
+/* Hide "Firefox Suggest", "Google Suggestions" and other labels */
+.urlbarView-row[label]::before {
+  /* Suppress the text */
+  display: none !important;
 }
-
-/* show on toolbox focus */
-#navigator-toolbox:focus-within > .browser-toolbar {
-  transform: translateY(0);
-  opacity: 1;
+.urlbarView-row[label] {
+  /* Remove the empty space */
+  margin-block-start: 0 !important;
 }
