@@ -43,9 +43,6 @@
 
 /* --- DEBLOAT URLBAR ----------------------------------- */
 
-#identity-box {
-  display: none;
-}
 #pageActionButton {
   display: none;
 }
