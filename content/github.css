@@ -17,4 +17,31 @@
       color: var(--color-header-bg) !important;
     }
   }
+
+  .container-xl {
+    max-width: 100%;
+  }
+
+  .repository-content .gutter-condensed.gutter-lg {
+    flex-direction: row-reverse !important;
+  }
+
+  .repository-content #discussion_bucket .gutter-condensed.gutter-lg {
+    flex-direction: row !important;
+  }
+
+  .repohead > div.d-flex {
+    margin-bottom: 0 !important;
+  }
+
+  #show_issue {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .repository-content #discussion_bucket,
+  #partial-discussion-header {
+    width: 100%;
+  }
 }
