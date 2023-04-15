@@ -1,0 +1,84 @@
+/*
+* {
+  color: #c6c9e3 !important;
+  background: #1a1b27 !important;
+  border: none !important;
+  border-width: 0 !important;
+  text-decoration: initial !important;
+  font-family: initial !important;
+  opacity: initial !important;
+  filter: initial !important;
+  box-shadow: none !important;
+  line-height: initial !important;
+}
+
+input,
+textarea,
+button {
+  border: 1px solid black !important;
+  border-radius: 0 !important;
+}
+
+::selection {
+  background-color: royalblue !important;
+  color: white !important;
+}
+
+a {
+  color: royalblue !important;
+  color: -webkit-link !important;
+  /* text-decoration: underline !important; */
+}
+
+a:active {
+  color: skyblue !important;
+  color: -webkit-activelink !important;
+}
+ 
+h1,
+h1 * {
+  font-size: 2em !important;
+  line-height: 1.57142857em !important;
+  margin-top: 0.78571429em !important;
+  margin-bottom: 0.78571429em !important;
+  font-weight: bolder !important;
+}
+h2,
+h2 * {
+  font-size: 1.57142857em !important;
+  line-height: 1em !important;
+  margin-top: 1em !important;
+  margin-bottom: 1em !important;
+  font-weight: bolder !important;
+}
+h3,
+h3 * {
+  font-size: 1.23809524em !important;
+  line-height: 2.53846154em !important;
+  margin-top: 1.26923077em !important;
+  margin-bottom: 0 !important;
+  font-weight: bold !important;
+}
+h4,
+h4 * {
+  font-size: 1em !important;
+  line-height: 1.57142857em !important;
+  margin-top: 1.57142857em !important;
+  margin-bottom: 0 !important;
+  font-weight: bold !important;
+}
+h5,
+h5 * {
+  font-size: 1em !important;
+  line-height: 1.57142857em !important;
+  margin-top: 1.57142857em !important;
+  margin-bottom: 0 !important;
+  font-weight: 800 !important;
+} 
+
+pre,
+code,
+pre *,
+code * {
+  font-family: monospace !important;
+}*/

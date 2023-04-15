@@ -8,3 +8,8 @@
 @import "content/som.css";
 @import "content/github.css";
 @import "content/fundament.css";
+
+/* Attempt to make everything use user-agent for colors, but preserve layout */
+/* @import "pretty.css"; */
+
+@import "gnome-theme/userContent.css";

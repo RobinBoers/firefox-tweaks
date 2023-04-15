@@ -1,5 +1,10 @@
-@import "lepton.css";
+/* Proton-like theme */
+/*@import "lepton.css";
 @import "menu.css";
-@import "photon.css"; 
+@import "photon.css"; */
 
+/* qute-like theme */
 /*@import "clean.css";*/
+
+/* GTK4-like theme */
+@import "gnome-theme/userChrome.css";
