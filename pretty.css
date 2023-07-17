@@ -1,5 +1,4 @@
-/*
-* {
+/** {
   color: #c6c9e3 !important;
   background: #1a1b27 !important;
   border: none !important;
@@ -10,12 +9,28 @@
   filter: initial !important;
   box-shadow: none !important;
   line-height: initial !important;
+}*/
+
+*:not(code):not(pre):not(pre code):not(code pre) {
+  font-family: initial !important;
+}
+
+html, body {
+  background: transparent !important;
+}
+
+* {
+  font-family: initial !important;
+  border-color: #ddd !important;
+}
+
+html body *:not(a):not(a *) {
+  color: black !important;
 }
 
 input,
 textarea,
 button {
-  border: 1px solid black !important;
   border-radius: 0 !important;
 }
 
@@ -24,13 +39,13 @@ button {
   color: white !important;
 }
 
-a {
+a, a * {
   color: royalblue !important;
   color: -webkit-link !important;
-  /* text-decoration: underline !important; */
+  text-decoration: underline !important;
 }
 
-a:active {
+a:active, a:active * {
   color: skyblue !important;
   color: -webkit-activelink !important;
 }
@@ -81,4 +96,4 @@ code,
 pre *,
 code * {
   font-family: monospace !important;
-}*/
+}

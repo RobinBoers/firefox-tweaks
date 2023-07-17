@@ -86,7 +86,7 @@
 }
 
 /* Autohide URL bar */
-
+/*
 :root {
   --address-bar-height: 40px;
   --browser-offset: calc(-1 * (var(--address-bar-height) + 1px));
@@ -103,7 +103,7 @@
   margin-top: var(--address-bar-height) !important;
 }
 
-/* #navigator-toolbox-background:hover, */
+/* #navigator-toolbox-background:hover, 
 #navigator-toolbox-background:focus-within {
   z-index: 9001 !important;
 }
